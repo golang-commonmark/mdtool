@@ -207,7 +207,7 @@ Use 'browser:' in place of the output file to get the output in a browser.
 		}
 	}
 
-	rendererOutput = md.RenderToString(data)
+	rendererOutput = md.RenderTokensToString(tokens)
 
 	if len(documents) == 1 {
 		writePreamble(os.Stdout)
