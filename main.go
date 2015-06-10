@@ -17,6 +17,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"html"
 	"io"
 	"io/ioutil"
 	"log"
@@ -27,7 +28,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/opennota/html"
 	"github.com/opennota/markdown"
 
 	"github.com/pkg/browser"
