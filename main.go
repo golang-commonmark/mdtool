@@ -46,6 +46,10 @@ var (
 	wg sync.WaitGroup
 )
 
+func readFromStdin() ([]byte, error) {
+	return ioutil.ReadAll(os.Stdin)
+}
+
 func readFromFile(fn string) ([]byte, error) {
 	f, err := os.Open(fn)
 	if err != nil {
@@ -69,6 +73,9 @@ func readFromWeb(url string) ([]byte, error) {
 func readInput(input string) ([]byte, error) {
 	if strings.HasPrefix(input, "http://") || strings.HasPrefix(input, "https://") {
 		return readFromWeb(input)
+	}
+	if input == "-" {
+		return readFromStdin()
 	}
 	return readFromFile(input)
 }
@@ -142,7 +149,7 @@ func main() {
 	log.SetFlags(log.Lshortfile)
 
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, `Usage: mdtool [options] {inputfile|URL} [outputfile]
+		fmt.Fprintf(os.Stderr, `Usage: mdtool [options] {inputfile|-|URL} [outputfile]
 
 Options:
   +h[tml]         Enable HTML
