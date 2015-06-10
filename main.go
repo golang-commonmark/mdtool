@@ -71,11 +71,11 @@ func readFromWeb(url string) ([]byte, error) {
 }
 
 func readInput(input string) ([]byte, error) {
-	if strings.HasPrefix(input, "http://") || strings.HasPrefix(input, "https://") {
-		return readFromWeb(input)
-	}
 	if input == "-" {
 		return readFromStdin()
+	}
+	if strings.HasPrefix(input, "http://") || strings.HasPrefix(input, "https://") {
+		return readFromWeb(input)
 	}
 	return readFromFile(input)
 }
