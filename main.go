@@ -156,6 +156,7 @@ Options:
   +l[inkify]      Enable autolinking
   +ta[bles]       Enable GFM tables
   +ty[pographer]  Enable typographic replacements
+  +a[ll]          All of the above
   +x[html]        XHTML output
 
   -help           Display help
@@ -180,6 +181,11 @@ Use 'browser:' in place of the output file to get the output in a browser.
 			os.Exit(1)
 		case "+xhtml", "+x":
 			xhtml = true
+		case "+all", "+a":
+			allowhtml = true
+			linkify = true
+			tables = true
+			typographer = true
 		default:
 			documents = append(documents, arg)
 		}
