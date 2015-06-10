@@ -149,7 +149,7 @@ func main() {
 	log.SetFlags(log.Lshortfile)
 
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, `Usage: mdtool [options] {inputfile|-|URL} [outputfile]
+		fmt.Fprintf(os.Stderr, `Usage: mdtool [options] [inputfile|URL] [outputfile]
 
 Options:
   +h[tml]         Enable HTML
@@ -184,9 +184,12 @@ Use 'browser:' in place of the output file to get the output in a browser.
 			documents = append(documents, arg)
 		}
 	}
-	if len(documents) == 0 || len(documents) > 2 {
+	if len(documents) > 2 {
 		flag.Usage()
 		os.Exit(1)
+	}
+	if len(documents) == 0 {
+		documents = []string{"-"}
 	}
 
 	data, err := readInput(documents[0])
