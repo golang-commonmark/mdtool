@@ -204,6 +204,7 @@ Use 'browser:' in place of the output file to get the output in a browser.
 				}
 				title += extractText(tokens[i])
 			}
+			title = strings.TrimSpace(title)
 		}
 	}
 
