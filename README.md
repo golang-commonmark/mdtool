@@ -13,7 +13,7 @@ An example command-line tool that uses [opennota/markdown](https://github.com/op
     Usage: mdtool [options] [inputfile|URL] [outputfile]
     
     Options:
-      +h[tml]         Enable HTML
+      +h[tml]         Enable raw HTML
       +l[inkify]      Enable autolinking
       +ta[bles]       Enable GFM tables
       +ty[pographer]  Enable typographic replacements
