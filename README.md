@@ -22,7 +22,7 @@ An example command-line tool that uses [opennota/markdown](https://github.com/op
     
       -help           Display help
     
-    Use 'browser:' in place of the output file to get the output in a browser.
+    Use 'browser:' in place of the output file to see the output in a browser.
 
 ## License
 
