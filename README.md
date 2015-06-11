@@ -20,7 +20,7 @@ An example command-line tool that uses [opennota/markdown](https://github.com/op
       +a[ll]          All of the above
       +x[html]        XHTML output
     
-      -help           Display help
+      -help           Display this help
     
     Use 'browser:' in place of the output file to see the output in a browser.
 
