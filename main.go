@@ -28,9 +28,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/opennota/markdown"
-
 	"github.com/pkg/browser"
+
+	"github.com/opennota/markdown"
 )
 
 var (
