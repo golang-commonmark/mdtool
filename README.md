@@ -1,4 +1,4 @@
-mdtool
+mdtool [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 ======
 
 An example command-line tool that uses [opennota/markdown](https://github.com/opennota/markdown) to process markdown input.
@@ -23,7 +23,3 @@ An example command-line tool that uses [opennota/markdown](https://github.com/op
       -help           Display this help
     
     Use 'browser:' in place of the output file to see the output in a browser.
-
-## License
-
-GNU GPL v3+
