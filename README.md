@@ -1,11 +1,11 @@
-mdtool [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
+mdtool [![License](https://img.shields.io/badge/licence-BSD--2--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 ======
 
-An example command-line tool that uses [opennota/markdown](https://github.com/opennota/markdown) to process markdown input.
+An example command-line tool that uses [golang-commonmark/markdown](https://github.com/golang-commonmark/markdown) to process markdown input.
 
 ## Installation
 
-    go get github.com/opennota/mdtool
+    go get github.com/golang-commonmark/mdtool
 
 ## Usage
 

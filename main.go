@@ -30,7 +30,7 @@ import (
 
 	"github.com/pkg/browser"
 
-	"github.com/opennota/markdown"
+	"github.com/golang-commonmark/markdown"
 )
 
 var (
